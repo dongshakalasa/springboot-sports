@@ -1,0 +1,39 @@
+server:
+  port: 81
+  servlet:
+    encoding:
+      charset: utf-8
+  tomcat:
+    uri-encoding: utf-8
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sports?useUnicode=true & characterEncoding=utf-8 & useSSL=true & serverTimezone=UTC
+    username: root
+    password: 123456
+  mail:
+    host: smtp.qq.com
+    username: 945405077@qq.com
+    password: lamdqsexrmncbbjf
+    port: 587
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          socketFactoryClass: javax.net.ssl.SSLSocketFactory
+        #表示开启 DEBUG 模式，这样，邮件发送过程的日志会在控制台打印出来，方便排查错误
+        debug: true
+#  http:
+#    encoding:
+#      charset: utf-8
+
+logging:
+  level:
+    com.spot.cn.mapper: debug
+
+mybatis:
+  mapper-locations: classpath:/Mapper/*.xml
+  type-aliases-package: com.ves.Pojo
+
+

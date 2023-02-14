@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ves.Mapper.CarMapper">
+
+    <insert id="insertCart" parameterType="com.ves.pojo.Cart" useGeneratedKeys="true" keyProperty="tcr_id">
+        insert into t_car(tcr_uuid, tcr_gs_id, tcr_number) values(#{tcr_uuid},#{tcr_gs_id},#{tcr_number})
+    </insert>
+
+</mapper>

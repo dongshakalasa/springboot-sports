@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ves.Mapper.OrderRateMapper">
+
+    <insert id="insertOrderRate" parameterType="com.ves.pojo.OrderRate" useGeneratedKeys="true" keyProperty="oe_id">
+        insert into t_orderrate(oe_uuid, oe_rate, oe_gs_id, oe_text, oe_date) values(#{oe_uuid},#{oe_rate},#{oe_gs_id},#{oe_text},now())
+    </insert>
+
+</mapper>
